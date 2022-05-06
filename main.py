@@ -57,20 +57,20 @@ Saida=False
 
 if(area_ao_lado):
     Area=True
-     mapa_para_area_de_resgate["ao lado"] = 0
+    mapa_para_area_de_resgate["ao lado"] = 0
 #    mapa_para_area_de_resgate['robot.turn']=[(-90 if posicao_inicial=="direita" else 90)]
 #    mapa_para_area_de_resgate['robot.straight']=[(catchesq_1 if posicao_inicial=="direita" else catchdir_1)]
 #    mapa_para_area_de_resgate['robot.turn']=[(-30 if posicao_inicial=="direita" else 30)]
 
 elif(saida_ao_lado):
     Saida=True
-     mapa_para_saida["ao lado"] = 0
+    mapa_para_saida["ao lado"] = 0
 #    mapa_para_saida['robot.turn']=[(-90 if posicao_inicial=="direita" else 90)]
 #    mapa_para_saida['robot.straight']=[(catchesq_1 if posicao_inicial=="direita" else catchdir_1)]
 
 elif(saida_a_frente):
     Saida=True
-     mapa_para_saida["a frente"] = 0
+    mapa_para_saida["a frente"] = 0
 #    mapa_para_saida['robot.straight']=[(catchfre_1)]
 
 while(not Area):
@@ -82,7 +82,7 @@ while(not Area):
     comprimento_horizontal = comprimento_horizontal_2 if comprimento_horizontal_1 != comprimento_horizontal_2 else comprimento_horizontal_1
     comprimento_horiz = comprimento_horizontal
     if(comprimento_horizontal_1!=comprimento_horizontal_2):
-         mapa_para_area_de_resgate["canto de baixo"]
+        mapa_para_area_de_resgate["canto de baixo"] = 0
  #       mapa_para_area_de_resgate['robot.turn']=[(-90 if posicao_inicial=="direita" else 90)]
  #       mapa_para_area_de_resgate['robot.straight']=[(catchesq_1 if posicao_inicial=="direita" else catchdir_1)]
  #       mapa_para_area_de_resgate['robot.turn']=[(-30 if posicao_inicial=="direita" else 30)]
@@ -92,17 +92,17 @@ while(not Area):
     catchfre_3 = ultra_frontal.distance()
 
     if(e_um_triangulo_retangulo(catchfre_3, catchfre_2, 150)):
-         mapa_para_area_de_resgate["cima"] = 0 
+        mapa_para_area_de_resgate["cima"] = 0 
  #       mapa_para_area_de_resgate['robot.straight']=[(catchfre_3)]
  #       mapa_para_area_de_resgate['robot.turn']=[(30 if posicao_inicial=="direita" else -30)]
         comprimento_vertical = catchfre_1+comprimento_vertical_robo
         Area = True
         if(not Saida): 
-             mapa_para_saida["canto de cima"]
+            mapa_para_saida["canto de cima"] = 0
  #           mapa_para_saida['robot.turn']=[('calculo_do_angulo' if posicao_inicial=="direita" else -'calculo_do_angulo')]
  #           mapa_para_saida['robot.straight']=[('calculo da distancia até a saída, usando o comprimento da sala, etc...')]
     else:
-         mapa_para_area_de_resgate["canto de cima"]
+        mapa_para_area_de_resgate["canto de cima"] = 0
  #       mapa_para_area_de_resgate['robot.turn']=[('calculo_do_angulo' if posicao_inicial=="direita" else -'calculo_do_angulo')]
  #       mapa_para_area_de_resgate['robot.straight']=[('calculo da distancia até a área, usando o comprimento da sala, etc...')]
         Area = True
